@@ -15,4 +15,4 @@ FROM varnish:7.5.0 as prod
 
 COPY --from=build /build/target/release/varnishslog /usr/bin/varnishslog
 
-CMD "varnishlog -g raw -w /dev/stdout | /usr/bin/varnishslog"
+CMD ["/bin/sh", "-c", "varnishlog -g raw -w /dev/stdout | /usr/bin/varnishslog"]
