@@ -11,8 +11,8 @@ permissions:
   id-token: write
 
 env:
-  CACHE_REPO: ghcr.io/cubismod/varnishlog/cache
-  REPO: ghcr.io/cubismod/varnishlog
+  CACHE_REPO: ghcr.io/cubismod/varnishslog/cache
+  REPO: ghcr.io/cubismod/varnishslog
 
 on:
   push:
