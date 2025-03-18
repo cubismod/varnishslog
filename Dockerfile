@@ -11,7 +11,7 @@ RUN cargo build
 
 RUN cargo install --path .
 
-FROM varnish:7.6.1@sha256:2d5f66e3d491db9bef6fb8192ce916aefeae9f355d676d420f5c8c8692595ca8 as prod
+FROM varnish:7.6.1@sha256:07a5bf40cbd42e7b373ad55607fe965d58ba2e9830298422a98c6c076df2753d as prod
 
 COPY --from=build /build/target/release/varnishslog /usr/bin/varnishslog
 
